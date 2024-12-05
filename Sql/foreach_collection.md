@@ -42,3 +42,18 @@ INSERT ALL
     INTO TB_DC_ERROR (item_id, error_date) VALUES ('3', DATE)
 SELECT 1 FROM DUAL;
 ```
+form
+====
+form으로 제출할 시에 refresh가 될 수 밖에 없다.  
+refresh가 되면 다시 돌아갈 경로가 필요함.
+form으로 보낸 값은 @modelAttribute로 바인딩 가능하지만 
+ajax로 보낸 값은 @RequestBody로 바인딩 해야 함.
+
+error
+====
+Error creating bean name '...' defined in file  
+main -> resources -> properties -> omnione.proeprties   
+app.sp-keymanger-path 경로 문제.
+
+직렬화
+===
