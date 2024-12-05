@@ -33,8 +33,8 @@ INSERT INTO TB_DC_ERROR (item_id, error_date) VALUES
 (3, error_date), 
 (4, error_date)
 ```
-이런 식은 Mysql에서 가능하고 오라클에서는 지원되지 않는 형식이다.  
-오라클 형식은 이러함.  
+이런 식은 Mysql에서 가능하고 오라클에서는 지원되지 않는 형식입니다.  
+오라클 형식은 이러합니다.  
 ```sql
 INSERT ALL
     INTO TB_DC_ERROR (item_id, error_date) VALUES ('1', DATE)
@@ -42,18 +42,9 @@ INSERT ALL
     INTO TB_DC_ERROR (item_id, error_date) VALUES ('3', DATE)
 SELECT 1 FROM DUAL;
 ```
-form
-====
-form으로 제출할 시에 refresh가 될 수 밖에 없다.  
-refresh가 되면 다시 돌아갈 경로가 필요함.
-form으로 보낸 값은 @modelAttribute로 바인딩 가능하지만 
-ajax로 보낸 값은 @RequestBody로 바인딩 해야 함.
-
-error
-====
-Error creating bean name '...' defined in file  
-main -> resources -> properties -> omnione.proeprties   
-app.sp-keymanger-path 경로 문제.
-
-직렬화
-===
+해결 방법
+```java
+<foreach collection="list" item="item" open="INSERT ALL" close="SELECT 1 FROM DUAL">
+    INTO TB_DC_ERROR (item_id, error_date) VALUES (#{itemId}, SYSDATE)
+</foreach>
+```
