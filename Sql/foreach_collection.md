@@ -26,4 +26,19 @@ INSERT INTO TB_DC_ERROR (item_id, error_date) VALUES
 * close - 반복된 항목들 뒤에 추가할 문자열
 * separator - 각 항목 사이에 넣을 구분자를 지정하는 속성
   
-아직 어떤 식으로 구현되는지 완벽히 이해는 못했지만 추후에 더 알게되면 수정.
+```sql
+INSERT INTO TB_DC_ERROR (item_id, error_date) VALUES 
+(1, error_date), 
+(2, error_date), 
+(3, error_date), 
+(4, error_date)
+```
+이런 식은 Mysql에서 가능하고 오라클에서는 지원되지 않는 형식이다.  
+오라클 형식은 이러함.  
+```sql
+INSERT ALL
+    INTO TB_DC_ERROR (item_id, error_date) VALUES ('1', DATE)
+    INTO TB_DC_ERROR (item_id, error_date) VALUES ('2', DATE)
+    INTO TB_DC_ERROR (item_id, error_date) VALUES ('3', DATE)
+SELECT 1 FROM DUAL;
+```
