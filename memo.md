@@ -21,40 +21,4 @@ console.log(formData);
     age: "30"
 }
 ```
-화살표 함수 ()=>{}
-const sayHello = () => {
-  console.log("Hello, World!");
-};
-위 예제에서 sayHello는 매개변수가 없고, 함수 본문에서 "Hello, World!"를 출력하는 함수입니다. 호출은 sayHello();로 합니다.  
-const greet = name => {
-  console.log(`Hello, ${name}!`);
-};
-name 매개변수를 받아서 "Hello, {name}!"을 출력하는 함수입니다. 매개변수가 하나일 경우 괄호 ()를 생략할 수 있습니다.  
-const sum = (a, b) => {
-  return a + b;
-};
-const sum = (a, b) => {
-  return a + b;
-};
-이 함수는 두 개의 매개변수 a와 b를 받아서 그 합을 반환하는 함수입니다.  
-const add = (a, b) => a + b;
-위와 같이 중괄호 {}를 생략하고 한 줄로 값을 반환할 수 있습니다. 이 경우 return 키워드도 생략됩니다.  
-좀 더 이해를 위한 자료.  
-```java
-itemids = [1,2,3,4,5]
-ids = itemIds.map(num => ({itemId: num, status: "Y"}));
-```
-집에서 공부해야할것.  
-```java
-grid.on('checkAll', ()=>{
-    var data = gird.getCheckedRows();
-    itemIds = data.map(rowKey => rowKey.itemid);
-    ids = itemIds.map(num => ({itemId: num, status: "Y}));
-})
-grid.on('check', (ev)=>{
-var rows = systemListGrid.getData();
-var total = rwos.map(row => ({itemId: row.itemid, status: "N"
-checkedrows = grid.getcheckedrows()
-checkrow = checkedrows.map(row=>(itmeid: row.itmeid,
 
-```
