@@ -21,4 +21,12 @@ console.log(formData);
     age: "30"
 }
 ```
-
+## sql
+oracle sql join문을 작성할 때,
+```sql
+from
+    table1 a
+join
+    table2 b on a.value = b.value
+```
+as를 생략해야 에러가 발생하지 않는다.  
