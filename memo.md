@@ -21,3 +21,10 @@ console.log(formData);
     age: "30"
 }
 ```
+## error
+no string-argument constructor/factory method to deserialize from string value
+
+## JavaScript
+searchParam = {};
+searchParam.categoryId = 1;
+console.log(searchParam);
