@@ -1,11 +1,8 @@
 Today I Learned(TIL)
 ====================
-
-* Error
-    * [creating bean name](Spring/Error/Error%20creating%20bean%20name.md)
 * Frontend-concepts
-  * [유효성검사](유효성검사.md)
-  * [DOM](DOM.md)
+  * [유효성검사](Frontend-concepts/유효성검사.md)
+  * [DOM](Frontend-concepts/DOM.md)
 * Java
   * [생성자](Java/생성자.md)
 * JavaScript
@@ -18,8 +15,8 @@ Today I Learned(TIL)
   * [배열자르기](Programmers/배열자르기.md)
   * [세균증식](Programmers/세균증식.md)
   * [자릿수더하기](Programmers/자릿수더하기.md)
-  * [중앙값구하기](programmers/중앙값구하기.md.md)
-  * [최빈값구하기](programmers/최빈값구하기.md.md)
+  * [중앙값구하기](programmers/중앙값구하기.md)
+  * [최빈값구하기](programmers/최빈값구하기.md)
   * [특정문자제거하기](Programmers/특정문자제거하기.md)
 * Spring
   * [Form](Spring/form.md)
