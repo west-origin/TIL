@@ -1,7 +1,11 @@
 Today I Learned(TIL)
 ====================
+
 * Error
     * [creating bean name](Spring/Error/Error%20creating%20bean%20name.md)
+* Frontend-concepts
+  * [유효성검사](유효성검사.md)
+  * [DOM](DOM.md)
 * Java
   * [생성자](Java/생성자.md)
 * JavaScript
@@ -25,5 +29,4 @@ Today I Learned(TIL)
     * [동적쿼리 foreach](Sql/foreach_collection.md)
     * [<!CDATA[[]]>](sql/CDATA.md)
     * [문법](Sql/문법.md)
-- - -
-* [유효성검사](유효성검사.md)
+    * [Sequence & Trigger](sql/Sequence,%20Trigger.md)
