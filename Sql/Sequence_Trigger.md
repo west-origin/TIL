@@ -39,6 +39,25 @@ BEGIN --BEGIN ... END 트리거의 실행할 작업은 BEGIN과 END; 사이에 �
     INTO :NEW.id -- new.id에 dept_seq.NEXTVAL 값을 into로 할당.
     FROM dual;
 END;
+/
+```
+트리거 에러 확인
+```sql
+SELECT *
+FROM user_errors
+WHERE name='...'
+```
+트리거가 유효한 상태인지 확인
+```sql
+SELECT trigger_name, status
+FROM user_triggers
+WHERE trigger_name = 'trg_tb_dc_categories_id'
+```
+시퀀스가 제대로 존재하는지 확인
+```sql
+SELECT sequnce_name
+FROM user_sequences
+WHERE sequnce_name ='...'
 ```
 
 
