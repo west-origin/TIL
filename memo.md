@@ -15,3 +15,9 @@ class Solution {
 ```
 ### str[i].repeat(n)
 *  str[i]을 n번 반복 함.
+
+### sql trunc
+SELECT *
+FROM your_table
+WHERE TRUNC(insertdate) = TO_DATE('2024-12-21', 'YYYY-MM-DD');
+
