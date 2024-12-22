@@ -15,3 +15,19 @@ class Solution {
 ```
 ### str[i].repeat(n)
 *  str[i]을 n번 반복 함.
+
+### sql trunc
+SELECT *
+FROM your_table
+WHERE TRUNC(insertdate) = TO_DATE('2024-12-21', 'YYYY-MM-DD');
+
+SELECT CASE 
+    WHEN EXISTS (
+        SELECT 1 
+        FROM my_table 
+        WHERE id = #{id}
+    ) THEN 1 
+    ELSE 0 
+END AS result
+FROM dual;
+
