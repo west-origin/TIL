@@ -103,3 +103,8 @@ columns :
 }
 ```
 적용해보기
+```java
+jQuery("#sportBgnde").datepicker("option", "onClose", function(selectDate) {
+    jQuery("#sportEndde").datepicker("option", "minDate", selectDate);
+});
+```
