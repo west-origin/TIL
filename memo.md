@@ -86,25 +86,4 @@ columns :
     ]
 })
 ```
-```java
-{
-    data: "gubun",
-    className: "text-center align-middle",
-    render: function(data, type, row, meta) {
-        // "이상있음"이 선택되었으면 "checked", 아니면 "unchecked"
-        var isChecked = data === "Y" ? "checked" : "";
 
-        // 라디오 버튼을 생성, name은 meta.row로 고유하게 지정하여 각 행에서만 배타적으로 동작하도록 설정
-        return `<input type="radio" name="gubun_${meta.row}" value="Y" ${isChecked} 
-                    onclick="fn_gubun_save('${row.rqseq}', '${row.deptcode}', ${meta.row})"> 이상있음
-                <input type="radio" name="gubun_${meta.row}" value="N" ${data === "N" ? "checked" : ""} 
-                    onclick="fn_gubun_save('${row.rqseq}', '${row.deptcode}', ${meta.row})"> 이상없음`;
-    }
-}
-```
-적용해보기
-```java
-jQuery("#sportBgnde").datepicker("option", "onClose", function(selectDate) {
-    jQuery("#sportEndde").datepicker("option", "minDate", selectDate);
-});
-```
