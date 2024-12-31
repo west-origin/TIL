@@ -21,3 +21,6 @@ public int solution(int n) {
     return cnt;
 }
 ```
+```java
+StringBuilder[] strArray = new StringBuilder[my_string.length()];
+```
