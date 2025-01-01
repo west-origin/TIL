@@ -24,3 +24,12 @@ public int solution(int n) {
 ```java
 StringBuilder[] strArray = new StringBuilder[my_string.length()];
 ```
+```java
+char[] ch = my_string.toCharArray();
+```
+.charAt()의 반환값은 char이다.
+그러므로
+```java
+string.charAt(n)=='n'
+```
+으로 확인하면 된다.  
