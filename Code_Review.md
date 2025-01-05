@@ -6,7 +6,7 @@ System.out.println(result); // result: 4
 ```
 ```java
 my_string.replace(str, "");
-my_string.replace("[^0-9]", ""); // 숫자를 제외한 문자는 ""처리.
+my_string.replaceAll("[^0-9]", ""); // 숫자를 제외한 문자는 ""처리.
 ```
 ```java
 System.out.println("*".repeat(n)); // "*"를 n번 반복함
@@ -42,5 +42,20 @@ public String solution(int age) {
         }
 
         return sb.toString();
+}
+```
+```java
+public int[][] solution(int[] num_list, int n) {
+        int[][] answer = {};
+
+        int length = num_list.length;
+
+        answer = new int[length/n][n];
+
+        for(int i=0; i<length; i++){
+            answer[i/n][i%n]=num_list[i]; // 배워야하는 부분
+        }
+
+        return answer;
 }
 ```
