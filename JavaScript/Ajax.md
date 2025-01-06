@@ -28,3 +28,32 @@ private <String> title;
 private <integer> checkedList;
 //getter, setter
 ```
+```java
+function fn_submit_check() {
+    return new Promise((resolve, reject) => {
+        $.ajax({
+            url: '/...', 
+            method: 'GET',
+            success: function (data) {
+                if (data) {
+                    resolve(true);
+                } else {
+                    resolve(false);
+                }
+            },
+            error: function (error) {
+                reject(error); // 에러 발생 시 Promise 거부
+            }
+        });
+    });
+}
+
+fn_submit_check().then((result) => {
+    console.log(result); // true 또는 false
+    var flag = result;
+    console.log("flag:", flag);
+}).catch((error) => {
+    console.error("에러 발생:", error);
+});
+이렇게 해야 성공적으로 값을 사용할 수 있다.
+```
