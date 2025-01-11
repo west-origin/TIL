@@ -57,3 +57,10 @@ fn_submit_check().then((result) => {
 });
 이렇게 해야 성공적으로 값을 사용할 수 있다.
 ```
+```java
+$.ajax({
+  async : false, // 비동기화 -> 동기화로 변환
+  method: "post",
+  ...
+})
+```
