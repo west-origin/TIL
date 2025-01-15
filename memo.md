@@ -86,4 +86,13 @@ columns :
     ]
 })
 ```
-Math.abs()는 음수 값을 양수로 변환하고, 양수 값은 그대로 반환합니다.
+Math.abs()는 음수 값을 양수로 변환하고, 양수 값은 그대로 반환합니다.  
+```sql
+WITH date_range AS (
+    SELECT TO_DATE(#{searchRsvsDate}, 'YYYYMMDD') + LEVEL - 1 AS insertdate
+    FROM DUAL
+    CONNECT BY LEVEL <= TO_DATE(#{searchRsveDate}, 'YYYYMMDD') - TO_DATE(#{searchRsvsDate}, 'YYYYMMDD') + 1
+)
+```
+with이란 뭐지?  
+
