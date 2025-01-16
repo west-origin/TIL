@@ -48,3 +48,12 @@ SELECT 1 FROM DUAL;
     INTO TB_DC_ERROR (item_id, error_date) VALUES (#{itemId}, SYSDATE)
 </foreach>
 ```
+
+다중 update를 하는 법
+```java
+<foreach item="rowKey" collection="rowKeys" separator=";" open="DECLARE BEGIN" close="; END;">
+    UPDATE_쿼리_작성 
+</foreach>
+```
+
+s
