@@ -55,5 +55,3 @@ SELECT 1 FROM DUAL;
     UPDATE_쿼리_작성 
 </foreach>
 ```
-
-s
