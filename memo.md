@@ -86,4 +86,41 @@ columns :
     ]
 })
 ```
+Math.abs()는 음수 값을 양수로 변환하고, 양수 값은 그대로 반환합니다.  
+```sql
+WITH date_range AS (
+    SELECT TO_DATE(#{searchRsvsDate}, 'YYYYMMDD') + LEVEL - 1 AS insertdate
+    FROM DUAL
+    CONNECT BY LEVEL <= TO_DATE(#{searchRsveDate}, 'YYYYMMDD') - TO_DATE(#{searchRsvsDate}, 'YYYYMMDD') + 1
+)
+```
+with이란 뭐지?  
+```sql
+WITH date_range AS (
+    SELECT TO_DATE(#{searchRsvsDate}, 'YYYYMMDD') + LEVEL - 1 AS insertdate
+    FROM DUAL
+    CONNECT BY LEVEL <= TO_DATE(#{searchRsveDate}, 'YYYYMMDD') - TO_DATE(#{searchRsvsDate}, 'YYYYMMDD') + 1
+)
+SELECT
+    dr.insertdate AS insertDate,
+    b.category_name AS categoryName,
+    c.item_description AS itemDescription,
+    c.method_description AS methodDescription,
+    b.category_id AS categoryId,
+    c.item_id AS itemId,
+    a.status AS status,
+    a.memo AS memo
+FROM 
+    date_range dr
+LEFT JOIN 
+    portal.tb_dc_check a ON dr.insertdate = a.insertdate
+                          AND a.category_id = #{categoryId}
+LEFT JOIN 
+    portal.tb_dc_categories b ON a.category_id = b.category_id
+LEFT JOIN 
+    portal.tb_dc_check_items c ON a.item_id = c.item_id
+ORDER BY
+    dr.insertdate;
+```
+전체
 
