@@ -106,7 +106,39 @@ String args[]는 명령줄 인수를 받을 수 있는 배열입니다. 명령�
 자바에서 프로그램을 실행할 때 문자열로 받기때문에 String[] args로써 받습니다.  
 만약 명령어를 받을 생각이 없다면 String[] args가 없다고 해도 프로그램은 정상적으로 실행 될 것 입니다.  
 
+### this
+this란 인스턴스 변수와 매개변수를 구별, 지정하는 키워드입니다.  
+this를 사용해서 클래스 내의 생성자를 불러 올 수 있습니다.  
+this를 사용할 때와 사용하지 않을 때의 차이점을 확인하겠습니다.  
+```java
+// this를 사용한 경우.  
+class Person {
+    private String name;
+
+    // 생성자
+    public Person(String name){
+        this.name = name;
+    }
+}
+```
+this를 사용한 경우 this.name으로 이는 객체의 값이라는 것을 표시합니다.  
+this.name은 private String name 즉, 멤버변수를 가르킵니다.  
+```java
+// this를 사용하지 않은 경우.
+class Person {
+    private String name;
+
+    public Person (String name){
+        name = name;
+    }
+}
+```
+이렇게 선언한다면 매개변수를 매개변수 값으로 지정하겠다는 의미입니다.  
+즉, 멤버 변수 name에 값이 할당되지 않으며, 멤버 변수는 초기값 null로 남게 됩니다.  
+
 ### 내부 클래스
+내부 클래스란 어떤 클래스와 밀접한 관련이 있을 때 사용하는 클래스입니다.  
+
 
 ### 모듈
 모듈이란 특정 기능을 제공하는 코드의 집합입니다.  
