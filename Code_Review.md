@@ -1,79 +1,38 @@
 Code_Review
 ===
 ```java
+// 제곱근 
 int result = Math.sqrt(n); // n: 16
 System.out.println(result); // result: 4
 ```
 ```java
-my_string.replace(str, "");
-my_string.replaceAll("[^0-9]", ""); // 숫자를 제외한 문자는 ""처리.
+// replace
+my_string.replace(str, ""); // str을 ""로 바꿈
 ```
 ```java
+// repeat
 System.out.println("*".repeat(n)); // "*"를 n번 반복함
 ```
 ```java
-StringBuilder[] strArray = new StringBuilder[my_string.length()]; // StringBuilder는 언제 사용하는지 확인할 것.
-```
-```java
-char[] ch = my_string.toCharArray(); // String -> Array
-```
-.charAt()의 반환값은 char이다.
-그러므로
-```java
-string.charAt(n)=='n'
-```
-으로 확인하면 된다.  
-```java
-int num = 12345;
-String.valueOf(num) -> "12345"
-```
-```java
-str = "now days";
-str.indexOf(n) // n의 첫 인덱스를 반환
-```
-
-```java
-public String solution(int age) {
-        StringBuilder sb = new StringBuilder();
-
-        while(age > 0) {
-            sb.insert(0, (char) ((age % 10) + (int)'a'));
-            age /= 10;
-        }
-
-        return sb.toString();
+// 이렇게 하는 방법도 있네
+int[] answer = new int[10];
+int index = 0;
+for(int i = 0 ; i <= n ; i++){
+    answer[index++] = i;
 }
 ```
 ```java
-public int[][] solution(int[] num_list, int n) {
-        int[][] answer = {};
-
-        int length = num_list.length;
-
-        answer = new int[length/n][n];
-
-        for(int i=0; i<length; i++){
-            answer[i/n][i%n]=num_list[i]; // 배워야하는 부분
-        }
-
-        return answer;
-}
+//stream을 사용하여 List를 array형식으로 변환
+List<integer> answer = ArrayList<>();
+return answer.stream().mapToInt(x->x).toArray();
 ```
 ```java
-class Solution {
-    public String solution(String s) {
-        int[] alpha = new int[26];
-        for(char c : s.toCharArray()){
-            alpha[c - 'a']++;
-        }
-
-        StringBuilder answer = new StringBuilder();
-        for(int i = 0; i < 26; i++){
-            if(alpha[i] == 1){
-                answer.append((char)(i + 'a'));
-            }
-        }
-        return answer.toString();
-    }
-}
+//contains
+return (str1.contains(str2)? 1: 2);
 ```
+```java
+substring(i,x) // i번째부터 x개를 반환
+```
+
+
+
