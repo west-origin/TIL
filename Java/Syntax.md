@@ -151,6 +151,30 @@ class Person {
 캡슐화란 외부에서 직접적으로 데이터의 값을 수정할 수 없도록 하고,  
 메서드를 통해서만 데이터의 값에 접근할 수 있도록 하여 무결성을 보장합니다.  
 
+### 추상 클래스
+공통된 상태(필드)와 동작(메서드) 사용됩니다.  
+```java
+public abstract class Animal {
+    protected String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public void eat() {
+        System.out.println(name + " is eating.");
+    }
+
+    public abstract void sound();
+}
+```
+```java
+public interface Animal {
+    // 인스턴스 변수 선언 불가
+    void sound();
+}
+```
+
 
 ### 모듈
 모듈이란 특정 기능을 제공하는 코드의 집합입니다.  
