@@ -174,7 +174,57 @@ public interface Animal {
     void sound();
 }
 ```
+추상 클래스는 변수도 선언 가능하고 메서드도 가능하며 추상 메서드도 선언 가능합니다.  
+일반 클래스와 추상 클래스의 가장 큰 차이점은 추상 클래스는 인스턴스를 생성하지 못한다는 점이 가장 큰 차이점이라고 생각합니다.  
 
+### super()
+super은 상속한 상위 클래스의 멤버 변수를 가르키는 키워드입니다.  
+```java
+class Animal {
+    protected String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+}
+
+class Dog extends Animal {
+    public Dog(String name) {
+        super(name); // 상위 클래스 생성자 호출
+    }
+}
+```
+하위 클래스에서 상위 클래스를 호출할 때 필요로 합니다.  
+```java
+class Animal {
+    public void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void sound() {
+        super.sound(); // 상위 클래스의 sound 메서드 호출
+        System.out.println("Dog barks");
+    }
+}
+```
+상위 클래스의 필드를 지칭할때 사용합니다.  
+```java
+class Animal {
+    protected String name = "Animal";
+}
+
+class Dog extends Animal {
+    protected String name = "Dog";
+
+    public void printNames() {
+        System.out.println("상위 클래스 name: " + super.name); // Animal
+        System.out.println("하위 클래스 name: " + this.name); // Dog
+    }
+}
+```
 
 ### 모듈
 모듈이란 특정 기능을 제공하는 코드의 집합입니다.  
