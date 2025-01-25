@@ -231,3 +231,31 @@ class Dog extends Animal {
 모듈은 여러 함수, 클래스, 변수 등을 포함할 수 있습니다.
 모듈의 특징 중 하나는 재사용성이 용이하다는 것입니다. 여러 프로그램에서 모듈을 재사용할 수 있어 코드 유지보수가 용이합니다.  
 
+### 템플릿 메서드
+템플릿 메서드를 사용하여 알고리즘의 흐름을 정의하고 특정 메서드는 서브 클래스로 위임하는 것이 템플릿화 한다고 볼 수 있습니다.  
+* 템플릿 메서드
+```java
+abstract class Game {
+    // 템플릿 메서드: 게임의 전체 알고리즘 구조 정의
+    public final void play() {
+        startGame();   // 게임 시작
+        playTurn();    // 턴 진행
+        endGame();     // 게임 종료
+    }
+
+    // 공통 로직
+    protected void startGame() {
+        System.out.println("게임을 시작합니다.");
+    }
+
+    // 단계별 로직: 하위 클래스에서 구현
+    protected abstract void playTurn();  // 하위 클래스에서 구체적 구현
+
+    // 공통 로직
+    protected void endGame() {
+        System.out.println("게임을 종료합니다.");
+    }
+}
+```
+public final void play()가 알고리즘의 흐름을 정의하며, 일부 메서드는 서브 클래스로 위임하는 모습을 볼 수 있습니다.  
+이러한 템플릿 메서드를 이용하여 알고리즘의 흐름을 정의하며, 일부 메서드는 서브 클래스로 위임하는 것을 템플릿화라고 할 수 있습니다.  
