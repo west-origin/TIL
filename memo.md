@@ -315,6 +315,7 @@ public class LunarCalendar {
 }
 ```
 패키지가 다를 경우 클래스의 이름이 달라도 된다. 패키지의 경로는 해당 파일이 있는 실제 경로로 적어야한다.  
+java script fetch에 대해서 공부할 것.  
 
 
 
