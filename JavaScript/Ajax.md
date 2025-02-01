@@ -64,3 +64,17 @@ $.ajax({
   ...
 })
 ```
+AJAX (Asynchronous JavaScript and XML)  
+AJAX는 비동기적으로 서버와 데이터를 주고받는 기술을 의미하는 광범위한 개념이다. 예전에는 XMLHttpRequest (XHR) 객체를 활용하여 AJAX 요청을 보냈지만, 현재는 fetch API가 등장하면서 더 현대적인 방식으로 대체되고 있다.  
+
+fetch API  
+fetch는 AJAX를 수행할 수 있는 최신 API로, Promise 기반의 비동기 요청을 지원한다. 기존 XMLHttpRequest보다 코드가 간결하고 사용하기 편리하다.
+
+fetch 예제
+```java
+fetch('https://api.example.com/data')
+  .then(response => response.json()) // JSON 변환
+  .then(data => console.log(data))  // 데이터 출력
+  .catch(error => console.error('Fetch error:', error)); // 에러 처리
+```
+
