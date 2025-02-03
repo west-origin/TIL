@@ -315,11 +315,21 @@ public class LunarCalendar {
 }
 ```
 패키지가 다를 경우 클래스의 이름이 달라도 된다. 패키지의 경로는 해당 파일이 있는 실제 경로로 적어야한다.  
-java script fetch에 대해서 공부할 것.  
 
-
-
-
+### <jsp:include>
+포함하려는 JSP 파일 (header.jsp) 안에 <html> 또는 <body> 태그가 중복 선언되어 있는지 확인.  
+```html
+<html>
+<head>
+    <title>헤더</title>
+</head>
+<body>
+    <h1>Header</h1>
+</body>
+</html>
+```
+위처럼 <html>과 <body> 태그가 있다면, 포함될 때 원래 페이지의 <body> 안에 새로운 <body>가 생기면서 기존 내용이 초기화 된다.  
+* 해결 방법: header.jsp에서 <body> 태그를 제거.  
 
 
 
