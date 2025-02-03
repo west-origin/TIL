@@ -331,6 +331,7 @@ public class LunarCalendar {
 위처럼 <html>과 <body> 태그가 있다면, 포함될 때 원래 페이지의 <body> 안에 새로운 <body>가 생기면서 기존 내용이 초기화 된다.  
 * 해결 방법: header.jsp에서 <body> 태그를 제거.  
 
+###<fieldset>
 
 
 
