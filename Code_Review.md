@@ -33,6 +33,6 @@ return (str1.contains(str2)? 1: 2);
 ```java
 substring(i,x) // i번째부터 x개를 반환
 ```
-
+[1,2,3,4]를 반복하는 인덱스를 구할 땐 %를 이용하자
 
 
