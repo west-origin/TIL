@@ -21,3 +21,11 @@ S[j] - S[i-1]
 배포툴은 서버에 애플리케이션을 적재함.  
 특정 배포툴은 형상관리 개념도 있어 팀원 간에 애플리케이션 관리를 용이하게 함.  
 빌드, 테스트, 배포 등의 단계를 자동화하여 개발과 운영을 더 효율적으로 만들어줍니다.
+
+### BufferedReader
+Scanf보다 훨씬 빠른 입출력 제어기  
+```java
+BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in)); // 입력 받음
+StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine()); // bufferedReader.readLine()을 사용하여 한 줄의 문자열을 읽음. StringTokenizer를 사용하여 공백을 기준으로 문자열을 나눔.
+Integer.parseInt(stringTokenizer.nextToken()); //  토큰 단위(공백으로 나눈 단어)로 문자열을 반환.
+```
