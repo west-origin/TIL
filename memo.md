@@ -29,3 +29,39 @@ BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.
 StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine()); // bufferedReader.readLine()을 사용하여 한 줄의 문자열을 읽음. StringTokenizer를 사용하여 공백을 기준으로 문자열을 나눔.
 Integer.parseInt(stringTokenizer.nextToken()); //  토큰 단위(공백으로 나눈 단어)로 문자열을 반환.
 ```
+### 배열 합을 이용하여 문제 풀기
+```java
+package main;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
+        
+        int suNo = Integer.parseInt(stringTokenizer.nextToken());
+        int quizNo = Integer.parseInt(stringTokenizer.nextToken());
+        
+        long[] S = new long[suNo+1];
+        stringTokenizer = new StringTokenizer(bufferedReader.readLine());
+        
+        // 합배열 만들기
+        for(int i = 1 ; i <= suNo ; i++) {
+            S[i] = S[i-1] + Integer.parseInt(stringTokenizer.nextToken());
+        }
+        
+        // 질의 횟수
+        for(int q = 0 ; q < quizNo ; q++) {
+            stringTokenizer = new StringTokenizer(bufferedReader.readLine());
+            int i = Integer.parseInt(stringTokenizer.nextToken());
+            int j = Integer.parseInt(stringTokenizer.nextToken());
+            
+            System.out.println(S[j] - S[i-1]);
+        }
+    }
+}
+```
