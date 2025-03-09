@@ -106,6 +106,6 @@ clipreport
 <c:import url로 호출한 페이지와 동일한 ajax를 시도해보고 있는데 @responsebody로 할시,
 @ResponseBody를 컨트롤러의 메서드에 선언하면 해당 메서드는 View를 반환하지 않고, 응답 본문(body)으로 데이터를 직접 반환하는 방식이므로 동일한 방식으로 할수 없다
 
-Tomcat admin port  
-HTTP/1.1  
+Tomcat admin port 톰캣 종료할때 필요한 포트
+HTTP/1.1 웹브라우저에서 접근하기 위한 포트
 AJP/1.3  
