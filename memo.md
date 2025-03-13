@@ -114,3 +114,50 @@ Break Point란 디버깅 할 때 값을 알고 싶을 때, 에러가 발생하�
 
 ### null 반환값 역참조란?
 responsebody가 붙으면 페이지간의 전환은 불가하다
+
+### 오름차수 스택 연습 예제
+```java
+package main;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int[] A = new int[N];
+        
+        for(int i = 0 ; i < A.length ; i++) {
+            A[i] = sc.nextInt();
+        }
+        StringBuffer sb = new StringBuffer();
+        Stack<Integer> stack = new Stack<>();
+        int num = 1;
+        boolean result = true;
+        for(int i=0; i < A.length ; i++) {
+            int su = A[i];
+            if(su >= num) {
+                while (su >= A[i]) {
+                    stack.push(num++);
+                    sb.append("+\n");
+                }
+                stack.pop();
+                sb.append("-\n");
+            } else {
+                int n = stack.pop();
+                if(n > su) {
+                    System.out.println("NO");
+                    result = false;
+                    break;
+                } else {
+                    sb.append("-\n");
+                }
+            }
+        } 
+        if(result == true ) {
+            sb.toString();
+        }
+    }
+}
+```
