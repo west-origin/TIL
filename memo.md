@@ -161,3 +161,4 @@ public class Main {
     }
 }
 ```
+BufferedReader bf = new BufferedReader(new InputStreamReader(inputStream));
