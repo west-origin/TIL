@@ -163,5 +163,7 @@ public class Main {
 ```
 BufferedReader bf = new BufferedReader(new InputStreamReader(inputStream));
 
-자바 1차원 배열의 크기는 정해야 하지만 new example[ex.length][]식으로 선언할 수도 있다.
+자바 1차원 배열의 크기는 정해야 하지만 new example[ex.length][]식으로 선언할 수도 있다.  
 
+집가서 공부해야 할 것.
+Servelt이란? HttpServletRequest에 대해서 정리.  
