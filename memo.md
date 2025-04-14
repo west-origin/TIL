@@ -167,3 +167,5 @@ BufferedReader bf = new BufferedReader(new InputStreamReader(inputStream));
 
 집가서 공부해야 할 것.
 Servelt이란? HttpServletRequest에 대해서 정리.  
+
+<isEmpty property="">, <isNotEmpty property=""> <iterate property="" open="(" close=")" conjunction=",">, <dynamic> <isEqual property="" compareValue="...:>
