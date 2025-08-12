@@ -169,3 +169,11 @@ BufferedReader bf = new BufferedReader(new InputStreamReader(inputStream));
 Servelt이란? HttpServletRequest에 대해서 정리.  
 
 <isEmpty property="">, <isNotEmpty property=""> <iterate property="" open="(" close=")" conjunction=",">, <dynamic> <isEqual property="" compareValue="...:>
+
+### 이클립스 디버그 모드 사용법
+break point를 지정하면 프로그램 시작 ~ 브레이크 포인트까지 우선적으로 실행 후 멈춤.  
+브레이크 포인트에서 F5(step into), F6(step over)을 통하여 디버깅을 진행한다.  
+
+
+
+
