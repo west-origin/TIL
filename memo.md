@@ -174,6 +174,10 @@ Servelt이란? HttpServletRequest에 대해서 정리.
 break point를 지정하면 프로그램 시작 ~ 브레이크 포인트까지 우선적으로 실행 후 멈춤.  
 브레이크 포인트에서 F5(step into), F6(step over)을 통하여 디버깅을 진행한다.  
 
+### dao, dto, vo 차이
+vo 불변의 객체 
+dto 계층간의 데이터 이동에 사용하는 객체
+dao db와 연결되는 객체
 
 
 
