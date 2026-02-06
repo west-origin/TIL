@@ -76,3 +76,4 @@ function Shop(){
 }
 적용해가면서 공부 중.. 나중에 마저 수정
 ```
+let const의 차이 let은 재정의가 가능하고 const는 불가능하다.
